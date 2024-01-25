@@ -32,7 +32,7 @@ Isso tanto para sistemas Windows como para sistemas Linux.
 
 Assim, feito esse passo faleremos em seguida como utilizar o projeto.
 
-<b>Obs</b>: essa parte será mostrada no VsCode, além disso, é necessário ter o Python instalado na máquina para poder executar o código baixado.
+<b>Obs</b>: essa parte será mostrada no VsCode, além disso, é necessário ter o <a href="https://www.python.org/" target="_blank">Python</a> instalado na máquina para poder executar o código baixado.
 
 Caso você tenha o Python já instalado, pode seguir as próximas instruções abaixo:
 
