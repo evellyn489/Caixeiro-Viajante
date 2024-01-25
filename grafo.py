@@ -11,7 +11,7 @@ def read_matrix_distance(name_file):
 
     return matrix_distance
 
-name_file = 'name.txt'
+name_file = './datasets/name_file.txt'
 
 matrix_distance = read_matrix_distance(name_file)
 
