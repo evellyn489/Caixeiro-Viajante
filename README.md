@@ -59,6 +59,7 @@ A licença do projeto é MIT (Massachusetts Institute of Technology) , o que sig
 Por enquanto, não há uma sugestão específica de hardware, tendo em vista que os dados foram apenas armazenados. Para a aplicação do projeto, até o momento, foram utilizados 3 tipos de hardware:
 
 - Processador Intel Core i5 - 1135G7, 8GB de RAM, SSD de 256 GB e sistema operacional Windows.
+- Processador 2.300GHz Intel Core i3, 4GB de RAM, HD de 1 TB e sistema operacional Linux
 
 ## Software necessário
 
