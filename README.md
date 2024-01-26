@@ -51,12 +51,15 @@ A licença do projeto é MIT (Massachusetts Institute of Technology) , o que sig
 
 ## Contato dos desenvolvedores
 
-- Evellyn Rodrigues: evellyn.rocha@arapiraca.ufal.br</li>
-- Kauã Fellipe: kaua.bispo@arapiraca.ufal.br</li>
-- Lara Fernanda: lara.cavalcante@arapiraca.ufal.br</li>
+- Evellyn Rodrigues: evellyn.rocha@arapiraca.ufal.br
+- Kauã Fellipe: kaua.bispo@arapiraca.ufal.br
+- Lara Fernanda: lara.cavalcante@arapiraca.ufal.br
 
-# Hardware sugerido
+## Hardware sugerido
+Por enquanto, não há uma sugestão específica de hardware, tendo em vista que os dados foram apenas armazenados. Para a aplicação do projeto, até o momento, foram utilizados 3 tipos de hardware:
+
+- Processador Intel Core i5 - 1135G7, 8GB de RAM, SSD de 256 GB e sistema operacional Windows.
+
 ## Software necessário
 
-Todo o projeto está rodando em sistemas Linux e Windows
-
+Todo o projeto está rodando em sistemas Linux e Windows.
