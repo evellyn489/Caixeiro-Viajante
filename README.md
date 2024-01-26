@@ -49,11 +49,14 @@ Caso você tenha o Python já instalado, pode seguir as próximas instruções a
 ## Licença
 A licença do projeto é MIT (Massachusetts Institute of Technology) , o que significa que os usuários têm a liberdade de usar, modificar e distribuir o código-fonte conforme suas necessidades. 
 
-# Contato dos desenvolvedores
+## Contato dos desenvolvedores
 
 - Evellyn Rodrigues: evellyn.rocha@arapiraca.ufal.br</li>
 - Kauã Fellipe: kaua.bispo@arapiraca.ufal.br</li>
 - Lara Fernanda: lara.cavalcante@arapiraca.ufal.br</li>
 
 # Hardware sugerido
-# Software necessário
+## Software necessário
+
+Todo o projeto está rodando em sistemas Linux e Windows
+
