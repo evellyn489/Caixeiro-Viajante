@@ -5,7 +5,7 @@ Esse projeto se trata de um trabalho para a disciplina de Teoria dos Grafos na U
 
 Serão utilizadas cinco base de dados (ATT48, DANTZIG42, FRI26, GR17 e P01) para a resolução desse problema, disponíveis através do [link](https://people.sc.fsu.edu/~jburkardt/datasets/tsp/tsp.html).
 
-Os dados dos datasets foram armazenados na estrutura de dados Matriz. Isso porque, ela proporciona uma manipulação mais eficiente do grafo, facilitando as operações necessárias para abordar o PCV.
+Os dados utilizados dos datasets estão em um formato de matriz de adjacência (arquivos .d.txt), que correspondem às distâncias intermunicipais. Isso tornou possível simplesmente armazená-los em uma matriz. Isso porque, ela proporciona uma manipulação mais eficiente do grafo, facilitando as operações necessárias para abordar o PCV.
 
 Posteriormente serão implementados algoritmos para encontrar os caminhos mínimos para cada uma da base de dados.
 
