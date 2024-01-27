@@ -41,7 +41,7 @@ Caso você já tenha o Python instalado, pode seguir as próximas instruções a
 3. Quando for executar aparecerá um menu com os possíveis <b>datasets</b> que podem ser selecionados pelo usuário
 4. Com isso, terá o seguinte resultado:
 
-<img src="./images/image3.png">
+<img src="./images/image2.png">
 
 ## Licença
 A licença do projeto é MIT (Massachusetts Institute of Technology) , o que significa que os usuários têm a liberdade de usar, modificar e distribuir o código-fonte conforme suas necessidades. 
