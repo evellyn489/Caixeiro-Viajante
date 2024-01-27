@@ -1,18 +1,11 @@
 def read_matrix_distance(name_file):
-    file = open(name_file, 'r')
-
-    matrix_distance = []
-
-    for lines in file.readlines():
-        line = lines.split()
-        matrix_distance.append([int(x) for x in line])
-
-    file.close()
+    with open(name_file, 'r') as file:
+        matrix_distance = [list(map(int, line.split())) for line in file.readlines()]
 
     return matrix_distance
 
-name_file = './datasets/name_file.txt'
 
+name_file = './datasets/att48.txt'
 matrix_distance = read_matrix_distance(name_file)
 
 print(matrix_distance)
