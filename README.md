@@ -34,15 +34,12 @@ Assim, feito esse passo faleremos em seguida como utilizar o projeto.
 
 <b>Obs</b>: essa parte será mostrada no VsCode, além disso, é necessário ter o <a href="https://www.python.org/" target="_blank">Python</a> instalado na máquina para poder executar o código baixado.
 
-Caso você tenha o Python já instalado, pode seguir as próximas instruções abaixo:
+Caso você já tenha o Python instalado, pode seguir as próximas instruções abaixo:
 
 1. Abra o VsCode e em seguida a pasta que contém o projeto
 2. Em seguida, vai procurar o arquivo grafo.py
-3. E logo abaixo do código terá uma variável chamada <b>name_file</b> em que você vai digitar o nome do arquivo que se encontra na pasta <b>datasets</b>
-
-<img src="./images/image2.png">
-
-4. E depois só executar o código e terá o seguinte resultado:
+3. Quando for executar aparecerá um menu com os possíveis <b>datasets</b> que podem ser selecionados pelo usuário
+4. Com isso, terá o seguinte resultado:
 
 <img src="./images/image3.png">
 
