@@ -9,7 +9,7 @@ Os dados utilizados dos datasets estão em um formato de matriz de adjacência (
 
 Posteriormente serão implementados algoritmos para encontrar os caminhos mínimos para cada uma da base de dados.
 
-## Como usar
+## Instalação
 
 Antes de utilizar o projeto, é necessário baixar os arquivos para o seu computador. Assim, isso pode ser feito de 2 maneiras:
 
@@ -33,6 +33,8 @@ Isso tanto para sistemas Windows como para sistemas Linux.
 Assim, feito esse passo faleremos em seguida como utilizar o projeto.
 
 <b>Obs</b>: essa parte será mostrada no VsCode, além disso, é necessário ter o <a href="https://www.python.org/" target="_blank">Python</a> instalado na máquina para poder executar o código baixado.
+
+## Como usar
 
 Caso você já tenha o Python instalado, pode seguir as próximas instruções abaixo:
 
