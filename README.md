@@ -51,6 +51,7 @@ A licença do projeto é MIT (Massachusetts Institute of Technology) , o que sig
 - Evellyn Rodrigues: evellyn.rocha@arapiraca.ufal.br
 - Kauã Fellipe: kaua.bispo@arapiraca.ufal.br
 - Lara Fernanda: lara.cavalcante@arapiraca.ufal.br
+- Mayara Bispo: mayara.bispo@arapiraca.ufal.br
 
 ## Hardware sugerido
 Por enquanto, não há uma sugestão específica de hardware, tendo em vista que os dados foram apenas armazenados. Para a aplicação do projeto, até o momento, foram utilizados 3 tipos de hardware:
