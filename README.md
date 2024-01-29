@@ -40,7 +40,7 @@ Caso você já tenha o Python instalado, pode seguir as próximas instruções a
 
 1. Abra o VsCode e em seguida a pasta que contém o projeto
 2. Em seguida, vai procurar o arquivo grafo.py
-3. Quando for executar aparecerá um menu com os possíveis <b>datasets</b> que podem ser selecionados pelo usuário
+3. Ao executar, aparecerá um menu com os possíveis <b>datasets</b> que podem ser selecionados pelo usuário e assim, poderá escolher a base de dados de acordo com o número citado 
 4. Com isso, terá o seguinte resultado:
 
 <img src="./images/image2.png">
