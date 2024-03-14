@@ -16,38 +16,38 @@ while True:
 2 - dantzig42
 3 - fri26
 4 - gr17
-5 - p01'
+5 - p01
 
 Escolha qual base de dados deseja selecionar ou -1 para sair:''')
     
     num = int(input())
 
-    if (num == -1):
+    if num == -1:
         break
 
     name_file = ""
 
-    if (num == 1):
+    if num == 1:
         name_file = "./datasets/att48.txt"
 
-    elif (num == 2):
+    elif num == 2:
         name_file = "./datasets/dantzig42.txt"
 
-    elif (num == 3):
+    elif num == 3:
         name_file = "./datasets/fri26.txt"
 
-    elif (num == 4):
+    elif num == 4:
         name_file = "./datasets/gr17.txt"
 
-    elif (num == 5):
-        name_file = "./datasets/p01.txt"
+    elif num == 5:
+        name_file = "./datasets/five.txt"
 
     else:
         print("Não existe essa opção. Selecione um número entre 1 e 5.")
+        continue
 
-    if (1 <= num <= 5):
-        matrix_distance = read_matrix_distance(name_file)
-        print('\nBASE SELECIONADA\n')
+    matrix_distance = read_matrix_distance(name_file)
+    print('\nBASE SELECIONADA\n')
 
     print('''Qual algoritmo você deseja rodar?
           A - Força Bruta
@@ -65,9 +65,15 @@ Escolha qual base de dados deseja selecionar ou -1 para sair:''')
         initial = int(input('Digite o vértice de origem: '))
         final = int(input('Digite o vértice final: '))
 
-        # Indicar qual será o vértice raiz e o vértice que deseja chegar
-        dijkstraAlgorithm.dijkstra(matrix_distance, initial, final)
+        # Executar o algoritmo de Dijkstra adaptado para o PCV
+        path, cost = dijkstraAlgorithm.dijkstra_pcv(matrix_distance, initial)
 
+        if path:  # Se o caminho mínimo não estiver vazio
+            print("Caminho mínimo:", path)
+            print("Custo mínimo:", cost)
+        else:
+            print("Não foi possível encontrar um caminho mínimo do vértice de origem ao vértice final.")
+    
     elif option == 'C':
         print('Kruskal')
     elif option == 'D':
