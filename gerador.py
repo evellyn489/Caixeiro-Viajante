@@ -1,9 +1,5 @@
-##GERADOR DE ÁRVORE 
-
 import networkx as nx
 import matplotlib.pyplot as plt
-
-
 
 def adjacency_matrix_to_weighted_graph_from_file(filename):
     weighted_graph = {}
