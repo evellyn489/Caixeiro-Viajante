@@ -1,4 +1,4 @@
-mport itertools
+import itertools
 import time
 
 bases_de_dados = {
