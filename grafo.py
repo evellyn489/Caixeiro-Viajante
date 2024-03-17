@@ -36,7 +36,7 @@ while True:
         name_file = "./datasets/gr17.txt"
 
     elif (num == 5):
-        name_file = "./datasets/five.txt"
+        name_file = "./datasets/p01.txt"
 
     else:
         print("Não existe essa opção. Selecione um número entre 1 e 5.")
