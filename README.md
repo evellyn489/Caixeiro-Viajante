@@ -94,23 +94,23 @@ Caso você já tenha o Python instalado, pode seguir as próximas instruções a
     <tbody>
         <tr>
             <td>ATT48</td>
-            <td>91111</td>
+            <td>37362</td>
         </tr>
         <tr>
             <td>DANTZIG42</td>
-            <td>1659</td>
+            <td>562</td>
         </tr>
         <tr>
             <td>FRI26</td>
-            <td>1819</td>
+            <td>963</td>
         </tr>
         <tr>
             <td>GR17</td>
-            <td>2742</td>
+            <td>2333</td>
         </tr> 
         <tr>
             <td>P01</td>
-            <td>414</td>
+            <td>281</td>
         </tr> 
     </tbody>
 </table>
