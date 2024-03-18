@@ -81,6 +81,39 @@ Caso você já tenha o Python instalado, pode seguir as próximas instruções a
     </tbody>
 </table>
 
+<ul>
+    <li>Algoritmo de Christofides:</li>
+</ul>
+<table>
+    <thead>
+        <tr>
+            <th>Base de dados</th>
+            <th>Resultado do custo mínimo</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>ATT48</td>
+            <td>91111</td>
+        </tr>
+        <tr>
+            <td>DANTZIG42</td>
+            <td>1659</td>
+        </tr>
+        <tr>
+            <td>FRI26</td>
+            <td>1819</td>
+        </tr>
+        <tr>
+            <td>GR17</td>
+            <td>2742</td>
+        </tr> 
+        <tr>
+            <td>P01</td>
+            <td>414</td>
+        </tr> 
+    </tbody>
+</table>
 
 
 ## Licença
