@@ -1,3 +1,5 @@
+import numpy as np
+
 class Dijkstra:
     def __init__(self, graph, start_vertex):
         self.graph = graph
@@ -34,20 +36,15 @@ class Dijkstra:
         
         return path, total_distance
 
+def read_adjacency_matrix(filename):
+    adjacency_matrix = np.loadtxt(filename, dtype=int)
+    return adjacency_matrix
 
-graph = [
-    [0, 3, 4, 2, 7],
-    [3, 0, 4, 6, 3],
-    [4, 4, 0, 5, 8],
-    [2, 6, 5, 0, 6],
-    [7, 3, 8, 6, 0]
-]
+distance_matrix = read_adjacency_matrix('datasets/dantzig42.txt')
 
-
-# Vértice de partida
 start_vertex = 0
 
-tsp_solver = Dijkstra(graph, start_vertex)
+tsp_solver = Dijkstra(distance_matrix, start_vertex)
 tsp_path, tsp_distance = tsp_solver.solve()
 print("Caminho encontrado pelo algoritmo de Dijkstra para o TSP:", tsp_path)
 print("Comprimento total do caminho:", tsp_distance)
