@@ -115,6 +115,10 @@ Caso você já tenha o Python instalado, pode seguir as próximas instruções a
     </tbody>
 </table>
 
+<ul>
+    <li>Algoritmo de Kruskal:</li>
+</ul>
+
 <table>
     <thead>
         <tr>
