@@ -1,51 +1,53 @@
-def min_distance(distances, processed):
-    min_distance = float('inf')
-    min_index = 0
+class Dijkstra:
+    def __init__(self, graph, start_vertex):
+        self.graph = graph
+        self.start_vertex = start_vertex
+        self.quantity_cities = len(graph)
     
-    for vertex in range(len(distances)):
-        if distances[vertex] < min_distance and not processed[vertex]:
-            min_distance = distances[vertex]
-            min_index = vertex
-    return min_index
+    def solve(self):
+        path = [self.start_vertex]
+        visited_cities = {self.start_vertex}
+        current_city = self.start_vertex
+        total_distance = 0
+        
+        while len(visited_cities) < self.quantity_cities:
+            nearest_distance = float('inf')
+            nearest_neighbor = None
+            
+            for neighbor in range(self.quantity_cities):
+                if neighbor not in visited_cities:
+                    distance = self.graph[current_city][neighbor]
+                    if distance < nearest_distance:
+                        nearest_neighbor = neighbor
+                        nearest_distance = distance
 
-def dijkstra_pcv(graph, source):
-    num_vertices = len(graph)
-    distances = [[float('inf')] * num_vertices for _ in range(1 << num_vertices)]
-    distances[1 << source][source] = 0
-    parent = [[-1] * num_vertices for _ in range(1 << num_vertices)]
+            if nearest_neighbor is not None:
+                path.append(nearest_neighbor)
+                visited_cities.add(nearest_neighbor)
+                current_city = nearest_neighbor
+                total_distance += nearest_distance
+            else:
+                break
+        
+        total_distance += self.graph[path[-1]][self.start_vertex]
+        path.append(self.start_vertex)
+        
+        return path, total_distance
 
-    for mask in range(1, 1 << num_vertices):
-        for current_vertex in range(num_vertices):
-            if not (mask & (1 << current_vertex)):
-                continue
-            for neighbor in range(num_vertices):
-                if mask & (1 << neighbor):
-                    continue
-                next_mask = mask | (1 << neighbor)
-                if distances[mask][current_vertex] + graph[current_vertex][neighbor] < distances[next_mask][neighbor]:
-                    distances[next_mask][neighbor] = distances[mask][current_vertex] + graph[current_vertex][neighbor]
-                    parent[next_mask][neighbor] = current_vertex
 
-    # Encontra o vértice de origem no caminho mínimo
-    mask = (1 << num_vertices) - 1
-    min_cost = min(distances[mask][v] + graph[v][source] for v in range(num_vertices))
-    min_vertex = min(range(num_vertices), key=lambda v: distances[mask][v] + graph[v][source])
+graph = [
+    [0, 3, 4, 2, 7],
+    [3, 0, 4, 6, 3],
+    [4, 4, 0, 5, 8],
+    [2, 6, 5, 0, 6],
+    [7, 3, 8, 6, 0]
+]
 
-    # Reconstrói o caminho mínimo
-    path = []
-    while min_vertex != -1:
-        path.append(min_vertex)
-        mask ^= 1 << min_vertex
-        min_vertex = parent[mask][min_vertex]
 
-    # Inverte a ordem dos vértices no caminho mínimo para que a ordem comece do vértice de origem
-    path.reverse()
+# Vértice de partida
+start_vertex = 0
 
-    # Verifica se todos os vértices foram visitados no caminho mínimo
-    visited = set(path)
-    for vertex in range(num_vertices):
-        if vertex not in visited:
-            path.append(vertex)
-
-    # Retorna o caminho mínimo e o custo mínimo
-    return path, min_cost
+tsp_solver = Dijkstra(graph, start_vertex)
+tsp_path, tsp_distance = tsp_solver.solve()
+print("Caminho encontrado pelo algoritmo de Dijkstra para o TSP:", tsp_path)
+print("Comprimento total do caminho:", tsp_distance)

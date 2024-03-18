@@ -60,32 +60,8 @@ Escolha qual base de dados deseja selecionar ou -1 para sair:''')
     
     if option == 'A':
         print('Força bruta')
-    
     elif option == 'B':
-        # Vértice de origem
-        start_vertex = 0
-
-        # Executa o algoritmo de Dijkstra para encontrar os caminhos mais curtos
-        shortest_distances, shortest_paths = dijkstra.dijkstra(matrix_distance, start_vertex)
-
-        # Imprime os caminhos mais curtos e os custos mínimos
-        print("Caminhos mais curtos e custos mínimos a partir do vértice", start_vertex)
-        for i in range(len(shortest_distances)):
-            print("Caminho até o vértice", i, ":", shortest_paths[i] + [i], "Custo mínimo =", shortest_distances[i])
-
-        # Encontra um ciclo hamiltoniano mínimo utilizando o algoritmo do vizinho mais próximo
-        hamiltonian_cycle = dijkstra.nearest_neighbor(matrix_distance, start_vertex)
-
-        # Calcula o custo total do ciclo hamiltoniano
-        total_cost = dijkstra.calculate_path_cost(matrix_distance, hamiltonian_cycle)
-
-        # Imprime o ciclo hamiltoniano mínimo e o custo total
-        print("\nCiclo hamiltoniano mínimo começando e terminando no vértice", start_vertex, ":")
-        print(hamiltonian_cycle)
-        print("Custo total do ciclo hamiltoniano:", total_cost)
-
-
-
+        print('Dijkstra')
     elif option == 'C':
         print('Kruskal')
     elif option == 'D':
