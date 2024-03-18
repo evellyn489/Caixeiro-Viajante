@@ -1,88 +1,76 @@
-class Graph:
-    def __init__(self, vertices):
-        self.V = vertices
-        self.graph = []
+import numpy as np
 
-    # Função para adicionar uma aresta à lista de adjacência
-    def add_edge(self, u, v, w):
-        self.graph.append([u, v, w])
+class Graph: 
 
-    # Função para encontrar o conjunto de um elemento 'i'
-    def find(self, parent, i):
-        if parent[i] == i:
-            return i
-        return self.find(parent, parent[i])
+    def __init__(self, vertices): 
+        self.V = vertices 
+        self.graph = [] 
 
-    # Função para unir dois conjuntos diferentes em um único conjunto
-    def apply_union(self, parent, rank, x, y):
-        xroot = self.find(parent, x)
-        yroot = self.find(parent, y)
-        if rank[xroot] < rank[yroot]:
-            parent[xroot] = yroot
-        elif rank[xroot] > rank[yroot]:
-            parent[yroot] = xroot
-        else:
-            parent[yroot] = xroot
-            rank[xroot] += 1
+    def read_adjacency_matrix(self, filename):
+        adjacency_matrix = np.loadtxt(filename, dtype=int)
+        num_vertices = adjacency_matrix.shape[0]
 
-    # Aplicando o algoritmo de Kruskal
-    def kruskal_algo(self):
-        result = []
-        i, e = 0, 0
-        self.graph = sorted(self.graph, key=lambda item: item[2])
-        parent = [i for i in range(self.V)]
-        rank = [0] * self.V
-        while e < self.V - 1:
-            u, v, w = self.graph[i]
+        self.V = num_vertices
+
+        for u in range(num_vertices):
+            for v in range(num_vertices):
+                weight = int(adjacency_matrix[u][v])
+                if weight != 0:
+                 self.addEdge(u, v, weight)
+
+        
+
+    def addEdge(self, u, v, w): 
+        self.graph.append([u, v, w]) 
+
+    def find(self, parent, i): 
+        if parent[i] != i: 
+            parent[i] = self.find(parent, parent[i]) 
+        return parent[i] 
+
+    def union(self, parent, rank, x, y): 
+        if rank[x] < rank[y]: 
+            parent[x] = y 
+        elif rank[x] > rank[y]: 
+            parent[y] = x 
+        else: 
+            parent[y] = x 
+            rank[x] += 1
+
+    def KruskalMST(self): 
+        result = [] 
+        i = 0
+        e = 0
+        self.graph = sorted(self.graph, key=lambda item: item[2]) 
+        parent = [] 
+        rank = [] 
+        
+        print(self.V)
+
+        for node in range(self.V): 
+            parent.append(node) 
+            rank.append(0) 
+
+        while e < self.V - 1: 
+            u, v, w = self.graph[i] 
             i = i + 1
-            x = self.find(parent, u)
-            y = self.find(parent, v)
-            if x != y:
+            x = self.find(parent, u) 
+            y = self.find(parent, v) 
+
+            if x != y: 
                 e = e + 1
-                result.append([u, v, w])
-                self.apply_union(parent, rank, x, y)
-        for u, v, weight in result:
-            print("%d - %d: %d" % (u, v, weight))
+                result.append([u, v, w]) 
+                self.union(parent, rank, x, y) 
+
+        minimumCost = 0
+        print("Edges in the constructed MST") 
+        for u, v, weight in result: 
+            minimumCost += weight 
+            print("%d -- %d == %d" % (u, v, weight)) 
+        print("Minimum Spanning Tree", minimumCost) 
 
 
-# Função para ler a matriz de adjacência de um arquivo
-def read_adjacency_matrix(filename):
-    with open(filename, 'r') as file:
-        matrix = [[int(num) for num in line.split()] for line in file]
-    return matrix
-
-
-# Função para criar um grafo a partir da matriz de adjacência
-def create_graph_from_matrix(matrix):
-    vertices = len(matrix)
-    graph = Graph(vertices)
-    for i in range(vertices):
-        for j in range(vertices):
-            if matrix[i][j] != 0:
-                graph.add_edge(i, j, matrix[i][j])
-    return graph
-
-
-# Matriz de adjacência fornecida no formato solicitado
-adjacency_matrix = [
-    [ 0, 29, 82, 46, 68, 52, 72, 42, 51, 55, 29, 74, 23, 72, 46],
-    [29,  0, 55, 46, 42, 43, 43, 23, 23, 31, 41, 51, 11, 52, 21],
-    [82, 55,  0, 68, 46, 55, 23, 43, 41, 29, 79, 21, 64, 31, 51],
-    [46, 46, 68,  0, 82, 15, 72, 31, 62, 42, 21, 51, 51, 43, 64],
-    [68, 42, 46, 82,  0, 74, 23, 52, 21, 46, 82, 58, 46, 65, 23],
-    [52, 43, 55, 15, 74,  0, 61, 23, 55, 31, 33, 37, 51, 29, 59],
-    [72, 43, 23, 72, 23, 61,  0, 42, 23, 31, 77, 37, 51, 46, 33],
-    [42, 23, 43, 31, 52, 23, 42,  0, 33, 15, 37, 33, 33, 31, 37],
-    [51, 23, 41, 62, 21, 55, 23, 33,  0, 29, 62, 46, 29, 51, 11],
-    [55, 31, 29, 42, 46, 31, 31, 15, 29,  0, 51, 21, 41, 23, 37],
-    [29, 41, 79, 21, 82, 33, 77, 37, 62, 51,  0, 65, 42, 59, 61],
-    [74, 51, 21, 51, 58, 37, 37, 33, 46, 21, 65,  0, 61, 11, 55],
-    [23, 11, 64, 51, 46, 51, 51, 33, 29, 41, 42, 61,  0, 62, 23],
-    [72, 52, 31, 43, 65, 29, 46, 31, 51, 23, 59, 11, 62,  0, 59],
-    [46, 21, 51, 64, 23, 59, 33, 37, 11, 37, 61, 55, 23, 59,  0]
-]
-# Criando um grafo a partir da matriz de adjacência
-graph = create_graph_from_matrix(adjacency_matrix)
-
-# Aplicando o algoritmo de Kruskal ao grafo
-graph.kruskal_algo()
+if __name__ == '__main__': 
+    g = Graph(0)
+    g.read_adjacency_matrix("datasets/five.txt")
+    g.KruskalMST()
