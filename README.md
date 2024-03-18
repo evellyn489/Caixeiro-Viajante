@@ -45,6 +45,40 @@ Caso você já tenha o Python instalado, pode seguir as próximas instruções a
 
 <img src="./images/image2.png">
 
+## Resultados obtidos
+
+<ul>
+    <li>Algoritmo de Dijkstra:</li>
+</ul>
+<table>
+    <thead>
+        <tr>
+            <th>Base de dados</th>
+            <th>Resultado do custo mínimo</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>ATT48</td>
+            <td>40551</td>
+        </tr>
+        <tr>
+            <td>DANTZIG42</td>
+            <td>956</td>
+        </tr>
+        <tr>
+            <td>FRI26</td>
+            <td>1112</td>
+        </tr>
+        <tr>
+            <td>GR17</td>
+            <td>2187</td>
+        </tr> 
+    </tbody>
+</table>
+
+
+
 ## Licença
 A licença do projeto é MIT (Massachusetts Institute of Technology) , o que significa que os usuários têm a liberdade de usar, modificar e distribuir o código-fonte conforme suas necessidades. 
 
