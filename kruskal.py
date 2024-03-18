@@ -1,4 +1,6 @@
 import numpy as np
+import networkx as nx
+import matplotlib.pyplot as plt
 
 class Graph: 
 
@@ -68,9 +70,25 @@ class Graph:
             minimumCost += weight 
             print("%d -- %d == %d" % (u, v, weight)) 
         print("Minimum Spanning Tree", minimumCost) 
+        
+        G = nx.Graph()
+
+        # Add edges to the graph
+        for u, v, weight in result:
+            G.add_edge(u, v, weight=weight)
+
+        # Draw the graph
+        pos = nx.spring_layout(G)  # positions for all nodes
+        nx.draw(G, pos, with_labels=True, node_color='pink', node_size=150, edge_color='k', linewidths=5, font_size=10, font_weight='bold')
+        labels = nx.get_edge_attributes(G, 'weight')
+        nx.draw_networkx_edge_labels(G, pos, edge_labels=labels)
+
+        # Show the graph
+        plt.title("Minimum Spanning Tree")
+        plt.show()
 
 
 if __name__ == '__main__': 
     g = Graph(0)
-    g.read_adjacency_matrix("datasets/five.txt")
+    g.read_adjacency_matrix("datasets/fri26.txt")
     g.KruskalMST()
