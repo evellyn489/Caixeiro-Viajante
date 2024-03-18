@@ -90,5 +90,5 @@ class Graph:
 
 if __name__ == '__main__': 
     g = Graph(0)
-    g.read_adjacency_matrix("datasets/fri26.txt")
+    g.read_adjacency_matrix("datasets/p01.txt")
     g.KruskalMST()
