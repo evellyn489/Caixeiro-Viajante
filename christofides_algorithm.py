@@ -1,4 +1,5 @@
 import networkx as nx
+import numpy as np
 
 def create_complete_graph(distance_matrix):
     num_nodes = len(distance_matrix)
@@ -25,6 +26,7 @@ def minimum_weight_perfect_matching(graph, nodes):
         min_weight_matching.add_edge(u, v, weight=graph[u][v]['weight'])
     return min_weight_matching
 
+# Função para combinar dois grafos
 def combine_graphs(graph1, graph2):
     combined_graph = nx.Graph()
     combined_graph.add_edges_from(graph1.edges(data=True))
@@ -50,7 +52,6 @@ def calculate_tour_cost(tour, distance_matrix):
         total_cost += distance_matrix[tour[i]][tour[i+1]]
     return total_cost
 
-
 def christofides_tsp(distance_matrix):
     complete_graph = create_complete_graph(distance_matrix)
     min_spanning_tree = minimum_spanning_tree(complete_graph)
@@ -70,10 +71,14 @@ def christofides_tsp(distance_matrix):
 
     return tour
 
-'''
+def read_adjacency_matrix(filename):
+    adjacency_matrix = np.loadtxt(filename, dtype=int)
+    return adjacency_matrix
+
+distance_matrix = read_adjacency_matrix('datasets/dantzig42.txt')
+
 minimum_distance = christofides_tsp(distance_matrix)
 total_cost = calculate_tour_cost(minimum_distance, distance_matrix)
 
 print("Minimização da distância:", minimum_distance)
 print("Custo mínimo: ", total_cost)
-'''
