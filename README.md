@@ -115,6 +115,43 @@ Caso você já tenha o Python instalado, pode seguir as próximas instruções a
     </tbody>
 </table>
 
+<table>
+    <thead>
+        <tr>
+            <th>Base de dados</th>
+            <th>Resultado do custo mínimo</th>
+            <th>Árvore Geradora Mínima</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>ATT48</td>
+            <td>27670</td>
+            <td> <img src='./images/att48.png'> </td>
+        </tr>
+        <tr>
+            <td>DANTZIG42</td>
+            <td>591</td>
+            <td> <img src='./images/dantzig42.png'> </td>
+        </tr>
+        <tr>
+            <td>FRI26</td>
+            <td>741</td>
+            <td> <img src='./images/fri26.png'> </td>
+        </tr>
+        <tr>
+            <td>GR17</td>
+            <td>1421</td>
+            <td> <img src='./images/gr17.png'> </td>
+        </tr> 
+        <tr>
+            <td>P01</td>
+            <td>260</td>
+            <td> <img src='./images/p01.png'> </td>
+        </tr> 
+    </tbody>
+</table>
+
 
 ## Licença
 A licença do projeto é MIT (Massachusetts Institute of Technology) , o que significa que os usuários têm a liberdade de usar, modificar e distribuir o código-fonte conforme suas necessidades. 
