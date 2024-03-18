@@ -69,5 +69,5 @@ grafo.read_adjacency_matrix('p01.txt')
 melhor_caminho, menor_distancia, tempo_execucao = grafo.forca_bruta_pcv()
 print("Melhor caminho:", melhor_caminho)
 print("Menor distância:", menor_distancia)
-print("Tempo de execução:", tempo_execucao, "segundos")  
+print("Tempo de execução:", tempo_execucao, "segundos") 
       
