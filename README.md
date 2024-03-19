@@ -215,6 +215,7 @@ Por enquanto, não há uma sugestão específica de hardware, tendo em vista que
 - Processador Intel Core i5 - 1135G7, 8GB de RAM, SSD de 256 GB e sistema operacional Windows 11;
 - Processador 2.300GHz Intel Core i3, 4GB de RAM, HD de 1 TB e sistema operacional Ubuntu;
 - Processador AMD Ryzen 5 5600G, 16GB de RAM, SSD de 500GB, Debian GNU/Linux 12 (bookworm).
+- Processador AMD Ryzen 5 5500U, 8GB de RAM, Linux
 
 ## Software necessário
 
