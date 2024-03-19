@@ -156,6 +156,55 @@ Caso você já tenha o Python instalado, pode seguir as próximas instruções a
     </tbody>
 </table>
 
+<ul>
+    <li>Força Bruta:</li>
+</ul>
+
+Nenhuma das bases de dados resultaram numa resposta dentro do tempo máximo de execução de 12h
+
+<table>
+    <thead>
+        <tr>
+            <th>Base de dados</th>
+            <th>Qtd de iterações</th>
+            <th>Qtd de possibilidades</th>
+            <th>Tempo de execução</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>ATT48</td>
+            <td>31477230000</td>
+            <td> 1,241391559×10⁶¹ </td>
+            <td>12h</td>
+        </tr>
+        <tr>
+            <td>DANTZIG42</td>
+            <td>30753210000</td>
+            <td>1,405006118×10⁵¹</td>
+            <td> 12h </td>
+        </tr>
+        <tr>
+            <td>FRI26</td>
+            <td>25437780000</td>
+            <td>4,032914611×10²⁶</td>
+            <td> 12h </td>
+        </tr>
+        <tr>
+            <td>GR17</td>
+            <td>14461740000</td>
+            <td>3,556874281×10¹⁴</td>
+            <td>12h</td>
+        </tr> 
+        <tr>
+            <td>P01</td>
+            <td>1251440000</td>
+            <td>1,307674368×10¹²</td>
+            <td>12h</td>
+        </tr> 
+    </tbody>
+</table>
+
 
 ## Licença
 A licença do projeto é MIT (Massachusetts Institute of Technology) , o que significa que os usuários têm a liberdade de usar, modificar e distribuir o código-fonte conforme suas necessidades. 
